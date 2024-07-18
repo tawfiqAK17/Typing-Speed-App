@@ -1,0 +1,17 @@
+#pragma once
+
+#include "wx/wx.h"
+
+class Character : public wxStaticText{
+public:
+    enum class STATUSES {NON, CURRENT, CORRECT, INCORRECT};
+public:
+    Character(wxWindow *parent,
+              wxWindowID id,
+              const wxString &label,
+              const wxPoint &pos = wxDefaultPosition,
+              const wxSize &size = wxDefaultSize,
+              long style = 0,
+              const wxString &name = wxASCII_STR(wxStaticTextNameStr));
+    void ChangeColor(Character::STATUSES status);
+};
