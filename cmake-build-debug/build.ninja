@@ -53,7 +53,7 @@ build CMakeFiles/MyWxWidgetsApp.dir/MainFrame.cpp.o: CXX_COMPILER__MyWxWidgetsAp
   DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK3__ -D__WXGTK__
   DEP_FILE = CMakeFiles/MyWxWidgetsApp.dir/MainFrame.cpp.o.d
   FLAGS = -pthread -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -I/home/tawfiq/libs/wxWidgets-build/include -isystem /home/tawfiq/libs/wxWidgets-build/lib/wx/include/gtk3-unicode-3.2 -isystem /home/tawfiq/libs/wxWidgets-source/include
+  INCLUDES = -I/home/tawfiq/CLionProjects/untitled/../../libs/wxWidgets-build/include -isystem /home/tawfiq/libs/wxWidgets-build/lib/wx/include/gtk3-unicode-3.2 -isystem /home/tawfiq/libs/wxWidgets-source/include
   OBJECT_DIR = CMakeFiles/MyWxWidgetsApp.dir
   OBJECT_FILE_DIR = CMakeFiles/MyWxWidgetsApp.dir
 
@@ -61,7 +61,7 @@ build CMakeFiles/MyWxWidgetsApp.dir/App.cpp.o: CXX_COMPILER__MyWxWidgetsApp_unsc
   DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK3__ -D__WXGTK__
   DEP_FILE = CMakeFiles/MyWxWidgetsApp.dir/App.cpp.o.d
   FLAGS = -pthread -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -I/home/tawfiq/libs/wxWidgets-build/include -isystem /home/tawfiq/libs/wxWidgets-build/lib/wx/include/gtk3-unicode-3.2 -isystem /home/tawfiq/libs/wxWidgets-source/include
+  INCLUDES = -I/home/tawfiq/CLionProjects/untitled/../../libs/wxWidgets-build/include -isystem /home/tawfiq/libs/wxWidgets-build/lib/wx/include/gtk3-unicode-3.2 -isystem /home/tawfiq/libs/wxWidgets-source/include
   OBJECT_DIR = CMakeFiles/MyWxWidgetsApp.dir
   OBJECT_FILE_DIR = CMakeFiles/MyWxWidgetsApp.dir
 
@@ -69,7 +69,7 @@ build CMakeFiles/MyWxWidgetsApp.dir/Character.cpp.o: CXX_COMPILER__MyWxWidgetsAp
   DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK3__ -D__WXGTK__
   DEP_FILE = CMakeFiles/MyWxWidgetsApp.dir/Character.cpp.o.d
   FLAGS = -pthread -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -I/home/tawfiq/libs/wxWidgets-build/include -isystem /home/tawfiq/libs/wxWidgets-build/lib/wx/include/gtk3-unicode-3.2 -isystem /home/tawfiq/libs/wxWidgets-source/include
+  INCLUDES = -I/home/tawfiq/CLionProjects/untitled/../../libs/wxWidgets-build/include -isystem /home/tawfiq/libs/wxWidgets-build/lib/wx/include/gtk3-unicode-3.2 -isystem /home/tawfiq/libs/wxWidgets-source/include
   OBJECT_DIR = CMakeFiles/MyWxWidgetsApp.dir
   OBJECT_FILE_DIR = CMakeFiles/MyWxWidgetsApp.dir
 
@@ -83,8 +83,8 @@ build CMakeFiles/MyWxWidgetsApp.dir/Character.cpp.o: CXX_COMPILER__MyWxWidgetsAp
 
 build MyWxWidgetsApp: CXX_EXECUTABLE_LINKER__MyWxWidgetsApp_Debug CMakeFiles/MyWxWidgetsApp.dir/MainFrame.cpp.o CMakeFiles/MyWxWidgetsApp.dir/App.cpp.o CMakeFiles/MyWxWidgetsApp.dir/Character.cpp.o
   FLAGS = -pthread -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/tawfiq/libs/wxWidgets-build/lib  -L/home/tawfiq/libs/wxWidgets-build/lib  -pthread  -Wl,-rpath,/home/tawfiq/libs/wxWidgets-build/lib  -lwx_gtk3u_core-3.2  -lwx_baseu-3.2
-  LINK_PATH = -L/home/tawfiq/libs/wxWidgets-build/lib
+  LINK_LIBRARIES = -Wl,-rpath,/home/tawfiq/CLionProjects/untitled/../../libs/wxWidgets-build/lib:/home/tawfiq/libs/wxWidgets-build/lib  -L/home/tawfiq/libs/wxWidgets-build/lib  -pthread  -Wl,-rpath,/home/tawfiq/libs/wxWidgets-build/lib  -lwx_gtk3u_core-3.2  -lwx_baseu-3.2
+  LINK_PATH = -L/home/tawfiq/CLionProjects/untitled/../../libs/wxWidgets-build/lib   -L/home/tawfiq/libs/wxWidgets-build/lib
   OBJECT_DIR = CMakeFiles/MyWxWidgetsApp.dir
   POST_BUILD = :
   PRE_LINK = :

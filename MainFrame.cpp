@@ -1,4 +1,8 @@
 #include "MainFrame.h"
+#include <sstream>
+#include <fstream>
+#include <iomanip>
+#include <algorithm>
 
 MainFrame::MainFrame(const wxString &title) :
         wxFrame(nullptr, wxID_ANY, title, wxDefaultPosition, {1000, 800},
@@ -10,30 +14,60 @@ MainFrame::MainFrame(const wxString &title) :
 
 }
 
-void MainFrame::ShowMenu(std::string& string) {
+void MainFrame::ShowMenu() {
     auto panel = new wxPanel(this, wxID_ANY, wxDefaultPosition, wxDefaultSize);
     panel->SetBackgroundColour({0, 0, 0, 255});
-    auto startButton = new wxButton(panel, wxID_ANY, "START", {this->GetSize().x / 2 - 100, this->GetSize().y / 2}, {200, 100});
-    std::cout << this->GetSize().x << " " << this->GetSize().y << "\n";
+    auto startButton = new wxButton(panel, wxID_ANY, "START", {this->GetSize().x / 2 - 100, this->GetSize().y / 2},
+                                    {200, 100});
 
-    this->Bind(wxEVT_BUTTON, [this, string](wxCommandEvent& event) {
+    this->Bind(wxEVT_BUTTON, [this](wxCommandEvent &event) {
         this->DestroyChildren();
-        ShowMainPanel(string);
+        ShowMainPanel();
         event.Skip();
     });
 }
 
-void MainFrame::ShowMainPanel(const std::string& string ) {
+std::string MainFrame::GenerateString() {
+
+    char numberOfWords = 20 + rand() % 20; // between 20 and 40 word
+    std::ifstream file("words");
+
+    if (!file.is_open()) {
+        std::cerr << "Error: Could not open the file." << std::endl;
+        exit(-1);
+    }
+    std::vector<int> wordsIdx;
+
+    for (int i = 0; i < numberOfWords; i++) {
+        wordsIdx.push_back(rand() % 500); // 500 number of words in the file
+    }
+
+    std::stringstream stringstream;
+    int i = 0;
+    std::string word;
+
+    std::cout << "brah\n";
+    while (std::getline(file, word)) {
+        if (std::find(wordsIdx.begin(), wordsIdx.end(),i) != wordsIdx.end())
+            stringstream << word << " ";
+        i++;
+    }
+    return stringstream.str().substr(0, stringstream.str().size() - 1);
+}
+
+void MainFrame::ShowMainPanel() {
+    std::string string = GenerateString();
+
     auto *panel = new wxPanel(this, wxID_ANY, wxDefaultPosition,
-                                 wxSize(this->GetSize().x - 50, this->GetSize().y - 50));
+                              wxSize(this->GetSize().x - 50, this->GetSize().y - 50));
     panel->SetBackgroundColour({0, 255, 255, 200});
     panel->SetFocus();
 
     RenderCharacters(string, panel);
 
 
-    panel->Bind(wxEVT_CHAR, [this, panel](wxKeyEvent &event) {
-        HandelKeyboardEvent(event, panel);
+    panel->Bind(wxEVT_CHAR, [this](wxKeyEvent &event) {
+        HandelKeyboardEvent(event);
     });
 
     auto *boxSizer = new wxBoxSizer(wxVERTICAL);
@@ -75,7 +109,7 @@ void MainFrame::RenderCharacters(const std::string &string, wxPanel *panel) {
 
         m_characters.back()->SetFont(m_characters.back()->GetFont().Scale(2));
         m_characters.back()->SetSize(m_characters.back()->GetFont().GetPointSize(), 60);
-        m_characters.back()->ChangeColor(Character::STATUSES::NON);
+        m_characters.back()->ChangeStatus(Character::STATUSES::NON);
 
         curXPos += m_characters.back()->GetSize().x;
 
@@ -84,55 +118,74 @@ void MainFrame::RenderCharacters(const std::string &string, wxPanel *panel) {
             curXPos = 20;
         }
     }
-    m_characters[0]->ChangeColor(Character::STATUSES::CURRENT);
+    m_characters[0]->ChangeStatus(Character::STATUSES::CURRENT);
 }
 
-void MainFrame::HandelKeyboardEvent(wxKeyEvent &event, wxPanel *panel) {
-    if (m_currentIdx == m_characters.size() - 1) {
-        m_end = std::chrono::steady_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(m_end - m_start).count();
-        std::cout << duration << "\n";
-        this->DestroyChildren();
-        ShowResult(duration);
-        return;
-    }
+void MainFrame::HandelKeyboardEvent(wxKeyEvent &event) {
     if (!m_time_started) {
         m_start = std::chrono::steady_clock::now();
         m_time_started = true;
     }
     if (m_currentIdx > 0 && event.GetKeyCode() == 8) {
         m_characters[m_currentIdx]->SetBackgroundColour({0, 0, 0, 0});
-        m_characters[m_currentIdx--]->ChangeColor(Character::STATUSES::NON);
-        m_characters[m_currentIdx]->ChangeColor(Character::STATUSES::CURRENT);
+        m_characters[m_currentIdx--]->ChangeStatus(Character::STATUSES::NON);
+        m_characters[m_currentIdx]->ChangeStatus(Character::STATUSES::CURRENT);
         return;
     }
     if (event.GetKeyCode() == m_characters[m_currentIdx]->GetLabelText() ||
         event.GetKeyCode() == 13 && m_characters[m_currentIdx]->GetLabelText() == '\n') {
         m_characters[m_currentIdx]->SetBackgroundColour({0, 0, 0, 0});
-        m_characters[m_currentIdx++]->ChangeColor(Character::STATUSES::CORRECT);
+        m_characters[m_currentIdx++]->ChangeStatus(Character::STATUSES::CORRECT);
         if (m_currentIdx < m_characters.size())
-            m_characters[m_currentIdx]->ChangeColor(Character::STATUSES::CURRENT);
+            m_characters[m_currentIdx]->ChangeStatus(Character::STATUSES::CURRENT);
+        else
+            ShowResult();
     } else {
         m_characters[m_currentIdx]->SetBackgroundColour({0, 0, 0, 0});
-        m_characters[m_currentIdx++]->ChangeColor(Character::STATUSES::INCORRECT);
+        m_characters[m_currentIdx++]->ChangeStatus(Character::STATUSES::INCORRECT);
         if (m_currentIdx < m_characters.size())
-            m_characters[m_currentIdx]->ChangeColor(Character::STATUSES::CURRENT);
+            m_characters[m_currentIdx]->ChangeStatus(Character::STATUSES::CURRENT);
+        else
+            ShowResult();
     }
 }
 
-void MainFrame::ShowResult(long time_lapse) { // time_lapse in ms
+void MainFrame::ShowResult() { // time_lapse in ms
+    m_end = std::chrono::steady_clock::now();
+    auto time_lapse = std::chrono::duration_cast<std::chrono::milliseconds>(m_end - m_start).count();
+    this->DestroyChildren();
 
-    auto timePanel = new wxPanel(this, wxID_ANY, {250, 100}, {this->GetSize().x, 200});
-    auto wordsNumPanel = new wxPanel(this, wxID_ANY, {250, 300}, {this->GetSize().x, 200});
-    auto wpmPanel = new wxPanel(this, wxID_ANY, {250, 500}, {this->GetSize().x, 200});
+    int faults = 0;
+    for (auto character: m_characters)
+        if (character->GetStatus() == Character::STATUSES::INCORRECT)
+            faults++;
 
-    auto time = new wxStaticText(timePanel, wxID_ANY, "Time : " + std::to_string(time_lapse / 1000) + " s " +  std::to_string(time_lapse % 1000) + " ms", {250, 100}, {this->GetSize().x, 200});
-    auto wordsNum = new wxStaticText(wordsNumPanel, wxID_ANY, "Number of words: " + std::to_string(m_numOfWords), {250, 100}, {this->GetSize().x, 200});
-    auto wpm = new wxStaticText(wpmPanel, wxID_ANY, "Words per minute : " + std::to_string(60000 * m_numOfWords / time_lapse), {250, 100}, {this->GetSize().x, 200});
+    float precision = 100 - 100 * (float) faults / (float)m_characters.size();
 
-    time->SetFont(time->GetFont().Scale(5));
-    wordsNum->SetFont(wordsNum->GetFont().Scale(5));
-    wpm->SetFont(wpm->GetFont().Scale(5));
+    auto timePanel = new wxPanel(this, wxID_ANY, {250, 0}, {this->GetSize().x, 200});
+    auto wordsNumPanel = new wxPanel(this, wxID_ANY, {250, 200}, {this->GetSize().x, 200});
+    auto precisionPanel = new wxPanel(this, wxID_ANY, {250, 400}, {this->GetSize().x, 200});
+    auto wpmPanel = new wxPanel(this, wxID_ANY, {250, 600}, {this->GetSize().x, 200});
+
+    std::ostringstream timeTextStream;
+    timeTextStream << "Time: " << time_lapse / 1000 << " s " << time_lapse % 1000 << " ms";
+    std::ostringstream wordsNumTextStream;
+    wordsNumTextStream << "Number of words: " << m_numOfWords;
+    std::ostringstream precisionTextStream;
+    precisionTextStream << "Precision: " << std::setprecision(2) << precision << "%";
+    std::ostringstream wpmTextStream;
+    wpmTextStream << "Words per minute : " << 60000 * m_numOfWords / time_lapse;
+
+    auto timeText = new wxStaticText(timePanel, wxID_ANY, timeTextStream.str(), {250, 100},{this->GetSize().x, 200});
+    auto wordsNumText = new wxStaticText(wordsNumPanel, wxID_ANY, wordsNumTextStream.str(), {250, 100}, {this->GetSize().x, 200});
+    auto precisionText = new wxStaticText(precisionPanel, wxID_ANY, precisionTextStream.str(), {250, 100}, {this->GetSize().x, 200});
+    auto wpmText = new wxStaticText(wpmPanel, wxID_ANY, wpmTextStream.str(), {250, 100}, {this->GetSize().x, 200});
+
+
+    timeText->SetFont(timeText->GetFont().Scale(5));
+    wordsNumText->SetFont(wordsNumText->GetFont().Scale(5));
+    precisionText->SetFont(precisionText->GetFont().Scale(5));
+    wpmText->SetFont(wpmText->GetFont().Scale(5));
 }
 
 

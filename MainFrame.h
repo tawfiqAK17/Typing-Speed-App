@@ -8,15 +8,18 @@ class MainFrame : public wxFrame {
 public:
     explicit MainFrame(const wxString &title);
 
-    void ShowMenu(std::string& string);
+    void ShowMenu();
 
-    void ShowMainPanel(const std::string& string);
+private:
+    std::string GenerateString();
+
+    void ShowMainPanel();
 
     void RenderCharacters(const std::string &string, wxPanel *panel);
 
-    void HandelKeyboardEvent(wxKeyEvent &event, wxPanel *panel);
+    void HandelKeyboardEvent(wxKeyEvent &event);
 
-    void ShowResult(long time_lapse);
+    void ShowResult();
 
 private:
     std::vector<Character *> m_characters;

@@ -17,20 +17,28 @@ Character::Character(wxWindow *parent,
 
 }
 
-void Character::ChangeColor(Character::STATUSES status) {
+void Character::ChangeStatus(Character::STATUSES status) {
     switch (status) {
         case STATUSES::NON:
+            m_status = STATUSES::NON;
             SetForegroundColour(NON_FG_COLOR);
             SetBackgroundColour(NON_BG_COLOR);
             break;
         case STATUSES::CURRENT:
+            m_status = STATUSES::CURRENT;
             SetBackgroundColour(CURRENT_BG_COLOR);
             break;
         case STATUSES::CORRECT:
+            m_status = STATUSES::CORRECT;
             SetBackgroundColour(CORRECT_BG_COLOR);
             break;
         case STATUSES::INCORRECT:
+            m_status = STATUSES::INCORRECT;
             SetBackgroundColour(INCORRECT_BG_COLOR);
             break;
     }
+}
+
+Character::STATUSES Character::GetStatus() {
+    return m_status;
 }

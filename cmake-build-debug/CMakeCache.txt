@@ -14,6 +14,24 @@
 # EXTERNAL cache entries
 ########################
 
+//Boost base library (debug)
+Boost_BASE_LIBRARY_DEBUG:FILEPATH=Boost_BASE_LIBRARY_DEBUG-NOTFOUND
+
+//Boost base library (release)
+Boost_BASE_LIBRARY_RELEASE:FILEPATH=Boost_BASE_LIBRARY_RELEASE-NOTFOUND
+
+//Boost core library (debug)
+Boost_CORE_LIBRARY_DEBUG:FILEPATH=Boost_CORE_LIBRARY_DEBUG-NOTFOUND
+
+//Boost core library (release)
+Boost_CORE_LIBRARY_RELEASE:FILEPATH=Boost_CORE_LIBRARY_RELEASE-NOTFOUND
+
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=Boost_DIR-NOTFOUND
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=Boost_INCLUDE_DIR-NOTFOUND
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -244,6 +262,18 @@ wxWidgets_wxrc_EXECUTABLE:FILEPATH=wxWidgets_wxrc_EXECUTABLE-NOTFOUND
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_BASE_LIBRARY_DEBUG
+Boost_BASE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_BASE_LIBRARY_RELEASE
+Boost_BASE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CORE_LIBRARY_DEBUG
+Boost_CORE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CORE_LIBRARY_RELEASE
+Boost_CORE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_INCLUDE_DIR
+Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -385,8 +415,18 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/home/tawfiq/libs/boost_1_85_0][c ][v1.85.0(1.85)]
 //Details about finding wxWidgets
 FIND_PACKAGE_MESSAGE_DETAILS_wxWidgets:INTERNAL=[-L/home/tawfiq/libs/wxWidgets-build/lib;-pthread;-Wl,-rpath,/home/tawfiq/libs/wxWidgets-build/lib;-lwx_gtk3u_core-3.2;-lwx_baseu-3.2][/home/tawfiq/libs/wxWidgets-build/lib/wx/include/gtk3-unicode-3.2;/home/tawfiq/libs/wxWidgets-source/include][v3.2.5()]
+//Components requested for this build tree.
+_Boost_COMPONENTS_SEARCHED:INTERNAL=
+//Last used Boost_INCLUDE_DIR value.
+_Boost_INCLUDE_DIR_LAST:INTERNAL=/home/tawfiq/libs/boost_1_85_0
+//Last used Boost_NAMESPACE value.
+_Boost_NAMESPACE_LAST:INTERNAL=boost
+//Last used Boost_USE_MULTITHREADED value.
+_Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 

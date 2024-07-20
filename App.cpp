@@ -1,13 +1,15 @@
 #include "App.h"
 #include "MainFrame.h"
 
+
 wxIMPLEMENT_APP(App);
 
 bool App::OnInit() {
+    srand(time(0));
     auto *mainFrame = new MainFrame("hello");
-    std::string string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt pretium sapien id cursus. Nunc quis risus sed tellus commodo.";
-    mainFrame->ShowMenu(string);
+    mainFrame->ShowMenu();
     mainFrame->Center();
     mainFrame->Show();
     return true;
 }
+

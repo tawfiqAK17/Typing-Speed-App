@@ -2,6 +2,102 @@
 	"entries" : 
 	[
 		{
+			"name" : "Boost_BASE_LIBRARY_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Boost base library (debug)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "Boost_BASE_LIBRARY_DEBUG-NOTFOUND"
+		},
+		{
+			"name" : "Boost_BASE_LIBRARY_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Boost base library (release)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "Boost_BASE_LIBRARY_RELEASE-NOTFOUND"
+		},
+		{
+			"name" : "Boost_CORE_LIBRARY_DEBUG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Boost core library (debug)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "Boost_CORE_LIBRARY_DEBUG-NOTFOUND"
+		},
+		{
+			"name" : "Boost_CORE_LIBRARY_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Boost core library (release)"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "Boost_CORE_LIBRARY_RELEASE-NOTFOUND"
+		},
+		{
+			"name" : "Boost_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Boost."
+				}
+			],
+			"type" : "PATH",
+			"value" : "Boost_DIR-NOTFOUND"
+		},
+		{
+			"name" : "Boost_INCLUDE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a file."
+				}
+			],
+			"type" : "PATH",
+			"value" : "Boost_INCLUDE_DIR-NOTFOUND"
+		},
+		{
 			"name" : "CMAKE_ADDR2LINE",
 			"properties" : 
 			[
@@ -1142,6 +1238,18 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Boost",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding Boost"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[/home/tawfiq/libs/boost_1_85_0][c ][v1.85.0(1.85)]"
+		},
+		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_wxWidgets",
 			"properties" : 
 			[
@@ -1188,6 +1296,54 @@
 			],
 			"type" : "STATIC",
 			"value" : "/home/tawfiq/CLionProjects/untitled"
+		},
+		{
+			"name" : "_Boost_COMPONENTS_SEARCHED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Components requested for this build tree."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "_Boost_INCLUDE_DIR_LAST",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Last used Boost_INCLUDE_DIR value."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/home/tawfiq/libs/boost_1_85_0"
+		},
+		{
+			"name" : "_Boost_NAMESPACE_LAST",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Last used Boost_NAMESPACE value."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "boost"
+		},
+		{
+			"name" : "_Boost_USE_MULTITHREADED_LAST",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Last used Boost_USE_MULTITHREADED value."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

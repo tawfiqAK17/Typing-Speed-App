@@ -5,12 +5,12 @@ project(MyWxWidgetsApp)
 set(CMAKE_CXX_STANDARD 11)
 
 # Specify the path to your wxWidgets build directory
-set(wxWidgets_ROOT_DIR "/home/tawfiq/libs/wxWidgets-build")
+set(wxWidgets_ROOT_DIR "${PROJECT_SOURCE_DIR}/../../libs/wxWidgets-build")
 set(wxWidgets_LIB_DIR "${wxWidgets_ROOT_DIR}/lib")
 set(wxWidgets_INCLUDE_DIRS "${wxWidgets_ROOT_DIR}/include")
 
 # Explicitly set the wx-config executable path
-set(wxWidgets_CONFIG_EXECUTABLE "/home/tawfiq/libs/wxWidgets-build/wx-config")
+set(wxWidgets_CONFIG_EXECUTABLE "${PROJECT_SOURCE_DIR}/../../libs/wxWidgets-build/wx-config")
 
 # Add wxWidgets include directories explicitly
 include_directories(${wxWidgets_INCLUDE_DIRS})

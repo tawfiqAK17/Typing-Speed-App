@@ -13,5 +13,11 @@ public:
               const wxSize &size = wxDefaultSize,
               long style = 0,
               const wxString &name = wxASCII_STR(wxStaticTextNameStr));
-    void ChangeColor(Character::STATUSES status);
+
+    void ChangeStatus(Character::STATUSES status);
+
+    STATUSES GetStatus();
+
+private:
+    STATUSES m_status = STATUSES::NON;
 };

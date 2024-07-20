@@ -1,4 +1,5 @@
 /snap/clion/275/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/275/bin/ninja/linux/x64/ninja -G Ninja -S /home/tawfiq/CLionProjects/untitled -B /home/tawfiq/CLionProjects/untitled/cmake-build-debug
--- Configuring done (1.2s)
+-- Found Boost: /home/tawfiq/libs/boost_1_85_0 (found suitable version "1.85.0", minimum required is "1.85")  
+-- Configuring done (0.5s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/tawfiq/CLionProjects/untitled/cmake-build-debug
