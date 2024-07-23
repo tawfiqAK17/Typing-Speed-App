@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: MyWxWidgetsApp
+# Project: TypingSpeedApp
 # Configurations: Debug
 # =============================================================================
 
@@ -39,64 +39,64 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/tawfiq/CLionProjects/untitled/cmake-build-debug/
+cmake_ninja_workdir = /home/tawfiq/CLionProjects/TypingSpeedApp/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target MyWxWidgetsApp
+# Object build statements for EXECUTABLE target TypingSpeedApp
 
 
 #############################################
-# Order-only phony target for MyWxWidgetsApp
+# Order-only phony target for TypingSpeedApp
 
-build cmake_object_order_depends_target_MyWxWidgetsApp: phony || CMakeFiles/MyWxWidgetsApp.dir
+build cmake_object_order_depends_target_TypingSpeedApp: phony || CMakeFiles/TypingSpeedApp.dir
 
-build CMakeFiles/MyWxWidgetsApp.dir/MainFrame.cpp.o: CXX_COMPILER__MyWxWidgetsApp_unscanned_Debug /home/tawfiq/CLionProjects/untitled/MainFrame.cpp || cmake_object_order_depends_target_MyWxWidgetsApp
+build CMakeFiles/TypingSpeedApp.dir/MainFrame.cpp.o: CXX_COMPILER__TypingSpeedApp_unscanned_Debug /home/tawfiq/CLionProjects/TypingSpeedApp/MainFrame.cpp || cmake_object_order_depends_target_TypingSpeedApp
   DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK3__ -D__WXGTK__
-  DEP_FILE = CMakeFiles/MyWxWidgetsApp.dir/MainFrame.cpp.o.d
+  DEP_FILE = CMakeFiles/TypingSpeedApp.dir/MainFrame.cpp.o.d
   FLAGS = -pthread -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -I/home/tawfiq/CLionProjects/untitled/../../libs/wxWidgets-build/include -isystem /home/tawfiq/libs/wxWidgets-build/lib/wx/include/gtk3-unicode-3.2 -isystem /home/tawfiq/libs/wxWidgets-source/include
-  OBJECT_DIR = CMakeFiles/MyWxWidgetsApp.dir
-  OBJECT_FILE_DIR = CMakeFiles/MyWxWidgetsApp.dir
+  INCLUDES = -I/home/tawfiq/CLionProjects/TypingSpeedApp/../../libs/wxWidgets-build/include -isystem /home/tawfiq/libs/wxWidgets-build/lib/wx/include/gtk3-unicode-3.2 -isystem /home/tawfiq/libs/wxWidgets-source/include
+  OBJECT_DIR = CMakeFiles/TypingSpeedApp.dir
+  OBJECT_FILE_DIR = CMakeFiles/TypingSpeedApp.dir
 
-build CMakeFiles/MyWxWidgetsApp.dir/App.cpp.o: CXX_COMPILER__MyWxWidgetsApp_unscanned_Debug /home/tawfiq/CLionProjects/untitled/App.cpp || cmake_object_order_depends_target_MyWxWidgetsApp
+build CMakeFiles/TypingSpeedApp.dir/App.cpp.o: CXX_COMPILER__TypingSpeedApp_unscanned_Debug /home/tawfiq/CLionProjects/TypingSpeedApp/App.cpp || cmake_object_order_depends_target_TypingSpeedApp
   DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK3__ -D__WXGTK__
-  DEP_FILE = CMakeFiles/MyWxWidgetsApp.dir/App.cpp.o.d
+  DEP_FILE = CMakeFiles/TypingSpeedApp.dir/App.cpp.o.d
   FLAGS = -pthread -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -I/home/tawfiq/CLionProjects/untitled/../../libs/wxWidgets-build/include -isystem /home/tawfiq/libs/wxWidgets-build/lib/wx/include/gtk3-unicode-3.2 -isystem /home/tawfiq/libs/wxWidgets-source/include
-  OBJECT_DIR = CMakeFiles/MyWxWidgetsApp.dir
-  OBJECT_FILE_DIR = CMakeFiles/MyWxWidgetsApp.dir
+  INCLUDES = -I/home/tawfiq/CLionProjects/TypingSpeedApp/../../libs/wxWidgets-build/include -isystem /home/tawfiq/libs/wxWidgets-build/lib/wx/include/gtk3-unicode-3.2 -isystem /home/tawfiq/libs/wxWidgets-source/include
+  OBJECT_DIR = CMakeFiles/TypingSpeedApp.dir
+  OBJECT_FILE_DIR = CMakeFiles/TypingSpeedApp.dir
 
-build CMakeFiles/MyWxWidgetsApp.dir/Character.cpp.o: CXX_COMPILER__MyWxWidgetsApp_unscanned_Debug /home/tawfiq/CLionProjects/untitled/Character.cpp || cmake_object_order_depends_target_MyWxWidgetsApp
+build CMakeFiles/TypingSpeedApp.dir/Character.cpp.o: CXX_COMPILER__TypingSpeedApp_unscanned_Debug /home/tawfiq/CLionProjects/TypingSpeedApp/Character.cpp || cmake_object_order_depends_target_TypingSpeedApp
   DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK3__ -D__WXGTK__
-  DEP_FILE = CMakeFiles/MyWxWidgetsApp.dir/Character.cpp.o.d
+  DEP_FILE = CMakeFiles/TypingSpeedApp.dir/Character.cpp.o.d
   FLAGS = -pthread -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -I/home/tawfiq/CLionProjects/untitled/../../libs/wxWidgets-build/include -isystem /home/tawfiq/libs/wxWidgets-build/lib/wx/include/gtk3-unicode-3.2 -isystem /home/tawfiq/libs/wxWidgets-source/include
-  OBJECT_DIR = CMakeFiles/MyWxWidgetsApp.dir
-  OBJECT_FILE_DIR = CMakeFiles/MyWxWidgetsApp.dir
+  INCLUDES = -I/home/tawfiq/CLionProjects/TypingSpeedApp/../../libs/wxWidgets-build/include -isystem /home/tawfiq/libs/wxWidgets-build/lib/wx/include/gtk3-unicode-3.2 -isystem /home/tawfiq/libs/wxWidgets-source/include
+  OBJECT_DIR = CMakeFiles/TypingSpeedApp.dir
+  OBJECT_FILE_DIR = CMakeFiles/TypingSpeedApp.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target MyWxWidgetsApp
+# Link build statements for EXECUTABLE target TypingSpeedApp
 
 
 #############################################
-# Link the executable MyWxWidgetsApp
+# Link the executable TypingSpeedApp
 
-build MyWxWidgetsApp: CXX_EXECUTABLE_LINKER__MyWxWidgetsApp_Debug CMakeFiles/MyWxWidgetsApp.dir/MainFrame.cpp.o CMakeFiles/MyWxWidgetsApp.dir/App.cpp.o CMakeFiles/MyWxWidgetsApp.dir/Character.cpp.o
+build TypingSpeedApp: CXX_EXECUTABLE_LINKER__TypingSpeedApp_Debug CMakeFiles/TypingSpeedApp.dir/MainFrame.cpp.o CMakeFiles/TypingSpeedApp.dir/App.cpp.o CMakeFiles/TypingSpeedApp.dir/Character.cpp.o
   FLAGS = -pthread -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/tawfiq/CLionProjects/untitled/../../libs/wxWidgets-build/lib:/home/tawfiq/libs/wxWidgets-build/lib  -L/home/tawfiq/libs/wxWidgets-build/lib  -pthread  -Wl,-rpath,/home/tawfiq/libs/wxWidgets-build/lib  -lwx_gtk3u_core-3.2  -lwx_baseu-3.2
-  LINK_PATH = -L/home/tawfiq/CLionProjects/untitled/../../libs/wxWidgets-build/lib   -L/home/tawfiq/libs/wxWidgets-build/lib
-  OBJECT_DIR = CMakeFiles/MyWxWidgetsApp.dir
+  LINK_LIBRARIES = -Wl,-rpath,/home/tawfiq/CLionProjects/TypingSpeedApp/../../libs/wxWidgets-build/lib:/home/tawfiq/libs/wxWidgets-build/lib  -L/home/tawfiq/libs/wxWidgets-build/lib  -pthread  -Wl,-rpath,/home/tawfiq/libs/wxWidgets-build/lib  -lwx_gtk3u_core-3.2  -lwx_baseu-3.2
+  LINK_PATH = -L/home/tawfiq/CLionProjects/TypingSpeedApp/../../libs/wxWidgets-build/lib   -L/home/tawfiq/libs/wxWidgets-build/lib
+  OBJECT_DIR = CMakeFiles/TypingSpeedApp.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = MyWxWidgetsApp
-  TARGET_PDB = MyWxWidgetsApp.dbg
+  TARGET_FILE = TypingSpeedApp
+  TARGET_PDB = TypingSpeedApp.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/tawfiq/CLionProjects/untitled/cmake-build-debug && /snap/clion/275/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/tawfiq/CLionProjects/TypingSpeedApp/cmake-build-debug && /snap/clion/284/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -107,7 +107,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/tawfiq/CLionProjects/untitled/cmake-build-debug && /snap/clion/275/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/tawfiq/CLionProjects/untitled -B/home/tawfiq/CLionProjects/untitled/cmake-build-debug
+  COMMAND = cd /home/tawfiq/CLionProjects/TypingSpeedApp/cmake-build-debug && /snap/clion/284/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/tawfiq/CLionProjects/TypingSpeedApp -B/home/tawfiq/CLionProjects/TypingSpeedApp/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -123,9 +123,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /home/tawfiq/CLionProjects/untitled/cmake-build-debug
+# Folder: /home/tawfiq/CLionProjects/TypingSpeedApp/cmake-build-debug
 
-build all: phony MyWxWidgetsApp
+build all: phony TypingSpeedApp
 
 # =============================================================================
 # Built-in targets
@@ -134,14 +134,14 @@ build all: phony MyWxWidgetsApp
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/tawfiq/CLionProjects/untitled/CMakeLists.txt /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindwxWidgets.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/UsewxWidgets.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/tawfiq/CLionProjects/TypingSpeedApp/CMakeLists.txt /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindwxWidgets.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/UsewxWidgets.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/tawfiq/CLionProjects/untitled/CMakeLists.txt /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindwxWidgets.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/UsewxWidgets.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build /home/tawfiq/CLionProjects/TypingSpeedApp/CMakeLists.txt /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindwxWidgets.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/UsewxWidgets.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################

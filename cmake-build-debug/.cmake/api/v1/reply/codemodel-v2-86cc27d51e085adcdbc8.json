@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "MyWxWidgetsApp",
+					"name" : "TypingSpeedApp",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "MyWxWidgetsApp::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-MyWxWidgetsApp-Debug-eb58cbb1bf6b94ba68bf.json",
-					"name" : "MyWxWidgetsApp",
+					"id" : "TypingSpeedApp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TypingSpeedApp-Debug-17d84cd4265b9fbfd509.json",
+					"name" : "TypingSpeedApp",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/tawfiq/CLionProjects/untitled/cmake-build-debug",
-		"source" : "/home/tawfiq/CLionProjects/untitled"
+		"build" : "/home/tawfiq/CLionProjects/TypingSpeedApp/cmake-build-debug",
+		"source" : "/home/tawfiq/CLionProjects/TypingSpeedApp"
 	},
 	"version" : 
 	{

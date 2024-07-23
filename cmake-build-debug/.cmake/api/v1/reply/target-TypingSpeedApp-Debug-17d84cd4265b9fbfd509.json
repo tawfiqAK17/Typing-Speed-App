@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "MyWxWidgetsApp"
+			"path" : "TypingSpeedApp"
 		}
 	],
 	"backtrace" : 1,
@@ -20,7 +20,7 @@
 		"files" : 
 		[
 			"CMakeLists.txt",
-			"/snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/UsewxWidgets.cmake"
+			"/snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28/Modules/UsewxWidgets.cmake"
 		],
 		"nodes" : 
 		[
@@ -113,7 +113,7 @@
 			[
 				{
 					"backtrace" : 8,
-					"path" : "/home/tawfiq/CLionProjects/untitled/../../libs/wxWidgets-build/include"
+					"path" : "/home/tawfiq/CLionProjects/TypingSpeedApp/../../libs/wxWidgets-build/include"
 				},
 				{
 					"backtrace" : 9,
@@ -143,7 +143,7 @@
 			]
 		}
 	],
-	"id" : "MyWxWidgetsApp::@6890427a1f51a3e7e1df",
+	"id" : "TypingSpeedApp::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -158,7 +158,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-L/home/tawfiq/CLionProjects/untitled/../../libs/wxWidgets-build/lib",
+				"fragment" : "-L/home/tawfiq/CLionProjects/TypingSpeedApp/../../libs/wxWidgets-build/lib",
 				"role" : "libraryPath"
 			},
 			{
@@ -167,7 +167,7 @@
 				"role" : "libraryPath"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/home/tawfiq/CLionProjects/untitled/../../libs/wxWidgets-build/lib:/home/tawfiq/libs/wxWidgets-build/lib",
+				"fragment" : "-Wl,-rpath,/home/tawfiq/CLionProjects/TypingSpeedApp/../../libs/wxWidgets-build/lib:/home/tawfiq/libs/wxWidgets-build/lib",
 				"role" : "libraries"
 			},
 			{
@@ -198,8 +198,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "MyWxWidgetsApp",
-	"nameOnDisk" : "MyWxWidgetsApp",
+	"name" : "TypingSpeedApp",
+	"nameOnDisk" : "TypingSpeedApp",
 	"paths" : 
 	{
 		"build" : ".",

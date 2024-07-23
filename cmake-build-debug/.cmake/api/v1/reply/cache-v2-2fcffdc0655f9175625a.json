@@ -2,102 +2,6 @@
 	"entries" : 
 	[
 		{
-			"name" : "Boost_BASE_LIBRARY_DEBUG",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Boost base library (debug)"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "Boost_BASE_LIBRARY_DEBUG-NOTFOUND"
-		},
-		{
-			"name" : "Boost_BASE_LIBRARY_RELEASE",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Boost base library (release)"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "Boost_BASE_LIBRARY_RELEASE-NOTFOUND"
-		},
-		{
-			"name" : "Boost_CORE_LIBRARY_DEBUG",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Boost core library (debug)"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "Boost_CORE_LIBRARY_DEBUG-NOTFOUND"
-		},
-		{
-			"name" : "Boost_CORE_LIBRARY_RELEASE",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Boost core library (release)"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "Boost_CORE_LIBRARY_RELEASE-NOTFOUND"
-		},
-		{
-			"name" : "Boost_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "The directory containing a CMake configuration file for Boost."
-				}
-			],
-			"type" : "PATH",
-			"value" : "Boost_DIR-NOTFOUND"
-		},
-		{
-			"name" : "Boost_INCLUDE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a file."
-				}
-			],
-			"type" : "PATH",
-			"value" : "Boost_INCLUDE_DIR-NOTFOUND"
-		},
-		{
 			"name" : "CMAKE_ADDR2LINE",
 			"properties" : 
 			[
@@ -151,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/tawfiq/CLionProjects/untitled/cmake-build-debug"
+			"value" : "/home/tawfiq/CLionProjects/TypingSpeedApp/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -211,7 +115,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/275/bin/cmake/linux/x64/bin/cmake"
+			"value" : "/snap/clion/284/bin/cmake/linux/x64/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -223,7 +127,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/275/bin/cmake/linux/x64/bin/cpack"
+			"value" : "/snap/clion/284/bin/cmake/linux/x64/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -235,7 +139,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/275/bin/cmake/linux/x64/bin/ctest"
+			"value" : "/snap/clion/284/bin/cmake/linux/x64/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -639,7 +543,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/tawfiq/CLionProjects/untitled/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/tawfiq/CLionProjects/TypingSpeedApp/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -699,7 +603,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/tawfiq/CLionProjects/untitled"
+			"value" : "/home/tawfiq/CLionProjects/TypingSpeedApp"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -751,7 +655,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "/snap/clion/275/bin/ninja/linux/x64/ninja"
+			"value" : "/snap/clion/284/bin/ninja/linux/x64/ninja"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -939,7 +843,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "MyWxWidgetsApp"
+			"value" : "TypingSpeedApp"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -983,7 +887,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28"
+			"value" : "/snap/clion/284/bin/cmake/linux/x64/share/cmake-3.28"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1238,18 +1142,6 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Boost",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Details about finding Boost"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "[/home/tawfiq/libs/boost_1_85_0][c ][v1.85.0(1.85)]"
-		},
-		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_wxWidgets",
 			"properties" : 
 			[
@@ -1262,7 +1154,7 @@
 			"value" : "[-L/home/tawfiq/libs/wxWidgets-build/lib;-pthread;-Wl,-rpath,/home/tawfiq/libs/wxWidgets-build/lib;-lwx_gtk3u_core-3.2;-lwx_baseu-3.2][/home/tawfiq/libs/wxWidgets-build/lib/wx/include/gtk3-unicode-3.2;/home/tawfiq/libs/wxWidgets-source/include][v3.2.5()]"
 		},
 		{
-			"name" : "MyWxWidgetsApp_BINARY_DIR",
+			"name" : "TypingSpeedApp_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1271,10 +1163,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/tawfiq/CLionProjects/untitled/cmake-build-debug"
+			"value" : "/home/tawfiq/CLionProjects/TypingSpeedApp/cmake-build-debug"
 		},
 		{
-			"name" : "MyWxWidgetsApp_IS_TOP_LEVEL",
+			"name" : "TypingSpeedApp_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1286,7 +1178,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "MyWxWidgetsApp_SOURCE_DIR",
+			"name" : "TypingSpeedApp_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1295,55 +1187,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/tawfiq/CLionProjects/untitled"
-		},
-		{
-			"name" : "_Boost_COMPONENTS_SEARCHED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Components requested for this build tree."
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : ""
-		},
-		{
-			"name" : "_Boost_INCLUDE_DIR_LAST",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Last used Boost_INCLUDE_DIR value."
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "/home/tawfiq/libs/boost_1_85_0"
-		},
-		{
-			"name" : "_Boost_NAMESPACE_LAST",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Last used Boost_NAMESPACE value."
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "boost"
-		},
-		{
-			"name" : "_Boost_USE_MULTITHREADED_LAST",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Last used Boost_USE_MULTITHREADED value."
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "TRUE"
+			"value" : "/home/tawfiq/CLionProjects/TypingSpeedApp"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
@@ -1356,42 +1200,6 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "TRUE"
-		},
-		{
-			"name" : "untitled_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/tawfiq/CLionProjects/untitled/cmake-build-debug"
-		},
-		{
-			"name" : "untitled_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
-		},
-		{
-			"name" : "untitled_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/tawfiq/CLionProjects/untitled"
 		},
 		{
 			"name" : "wxWidgets_USE_DEBUG",

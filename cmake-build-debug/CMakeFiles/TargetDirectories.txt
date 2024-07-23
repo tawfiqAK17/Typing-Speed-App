@@ -1,3 +1,3 @@
-/home/tawfiq/CLionProjects/untitled/cmake-build-debug/CMakeFiles/MyWxWidgetsApp.dir
-/home/tawfiq/CLionProjects/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/tawfiq/CLionProjects/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tawfiq/CLionProjects/TypingSpeedApp/cmake-build-debug/CMakeFiles/TypingSpeedApp.dir
+/home/tawfiq/CLionProjects/TypingSpeedApp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tawfiq/CLionProjects/TypingSpeedApp/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -5,25 +5,25 @@
 #include <algorithm>
 
 MainFrame::MainFrame(const wxString &title) :
-        wxFrame(nullptr, wxID_ANY, title, wxDefaultPosition, {1000, 800},
-                wxDEFAULT_FRAME_STYLE & ~(wxRESIZE_BORDER | wxMAXIMIZE_BOX)) {
-
-    Center();
-
-    SetClientSize(wxGetDisplaySize());
-
-}
+        wxFrame(nullptr, wxID_ANY, title, wxDefaultPosition, {1600, 800},
+                wxDEFAULT_FRAME_STYLE & ~(wxRESIZE_BORDER)) {}
 
 void MainFrame::ShowMenu() {
-    auto panel = new wxPanel(this, wxID_ANY, wxDefaultPosition, wxDefaultSize);
-    panel->SetBackgroundColour({0, 0, 0, 255});
-    auto startButton = new wxButton(panel, wxID_ANY, "START", {this->GetSize().x / 2 - 100, this->GetSize().y / 2},
+    auto panel = new wxPanel(this, wxID_ANY, {}, this->GetClientSize());
+    panel->SetFocus();
+
+    auto startButton = new wxButton(panel, wxID_ANY, "START", {this->GetClientSize().x / 2 - 100, this->GetClientSize().y / 2},
                                     {200, 100});
 
-    this->Bind(wxEVT_BUTTON, [this](wxCommandEvent &event) {
+    auto *boxSizer = new wxBoxSizer(wxVERTICAL);
+    boxSizer->Add(panel);
+
+    SetSizerAndFit(boxSizer);
+
+    panel->Bind(wxEVT_BUTTON, [this](wxCommandEvent &event) {
         this->DestroyChildren();
         ShowMainPanel();
-        event.Skip();
+//        event.Skip();
     });
 }
 
@@ -46,34 +46,12 @@ std::string MainFrame::GenerateString() {
     int i = 0;
     std::string word;
 
-    std::cout << "brah\n";
     while (std::getline(file, word)) {
         if (std::find(wordsIdx.begin(), wordsIdx.end(),i) != wordsIdx.end())
             stringstream << word << " ";
         i++;
     }
     return stringstream.str().substr(0, stringstream.str().size() - 1);
-}
-
-void MainFrame::ShowMainPanel() {
-    std::string string = GenerateString();
-
-    auto *panel = new wxPanel(this, wxID_ANY, wxDefaultPosition,
-                              wxSize(this->GetSize().x - 50, this->GetSize().y - 50));
-    panel->SetBackgroundColour({0, 255, 255, 200});
-    panel->SetFocus();
-
-    RenderCharacters(string, panel);
-
-
-    panel->Bind(wxEVT_CHAR, [this](wxKeyEvent &event) {
-        HandelKeyboardEvent(event);
-    });
-
-    auto *boxSizer = new wxBoxSizer(wxVERTICAL);
-    boxSizer->Add(panel, 1, wxALL, 50);
-
-    SetSizerAndFit(boxSizer);
 }
 
 void MainFrame::RenderCharacters(const std::string &string, wxPanel *panel) {
@@ -121,6 +99,27 @@ void MainFrame::RenderCharacters(const std::string &string, wxPanel *panel) {
     m_characters[0]->ChangeStatus(Character::STATUSES::CURRENT);
 }
 
+void MainFrame::ShowMainPanel() {
+    std::string string = GenerateString();
+
+    auto *panel = new wxPanel(this, wxID_ANY, wxDefaultPosition,
+                              wxSize(this->GetClientSize().x - 200, this->GetClientSize().y - 200));
+//    panel->SetBackgroundColour({0, 255, 255, 200});
+    panel->SetFocus();
+
+    RenderCharacters(string, panel);
+
+
+    panel->Bind(wxEVT_CHAR, [this](wxKeyEvent &event) {
+        HandelKeyboardEvent(event);
+    });
+
+    auto *boxSizer = new wxBoxSizer(wxVERTICAL);
+    boxSizer->Add(panel, 0, wxTOP | wxLEFT, 200);
+
+    SetSizerAndFit(boxSizer);
+}
+
 void MainFrame::HandelKeyboardEvent(wxKeyEvent &event) {
     if (!m_time_started) {
         m_start = std::chrono::steady_clock::now();
@@ -156,16 +155,21 @@ void MainFrame::ShowResult() { // time_lapse in ms
     this->DestroyChildren();
 
     int faults = 0;
-    for (auto character: m_characters)
-        if (character->GetStatus() == Character::STATUSES::INCORRECT)
+    for (auto character: m_characters) {
+        if (character->GetStatus() == Character::STATUSES::INCORRECT) {
             faults++;
+        }
+    }
 
     float precision = 100 - 100 * (float) faults / (float)m_characters.size();
 
-    auto timePanel = new wxPanel(this, wxID_ANY, {250, 0}, {this->GetSize().x, 200});
-    auto wordsNumPanel = new wxPanel(this, wxID_ANY, {250, 200}, {this->GetSize().x, 200});
-    auto precisionPanel = new wxPanel(this, wxID_ANY, {250, 400}, {this->GetSize().x, 200});
-    auto wpmPanel = new wxPanel(this, wxID_ANY, {250, 600}, {this->GetSize().x, 200});
+    m_characters.clear();
+    m_currentIdx = 0;
+
+    auto timePanel = new wxPanel(this, wxID_ANY, {250, 50}, {this->GetSize().x, 200});
+    auto wordsNumPanel = new wxPanel(this, wxID_ANY, {300, 200}, {this->GetSize().x, 200});
+    auto precisionPanel = new wxPanel(this, wxID_ANY, {350, 350}, {this->GetSize().x, 200});
+    auto wpmPanel = new wxPanel(this, wxID_ANY, {400, 500}, {this->GetSize().x, 200});
 
     std::ostringstream timeTextStream;
     timeTextStream << "Time: " << time_lapse / 1000 << " s " << time_lapse % 1000 << " ms";
@@ -174,7 +178,7 @@ void MainFrame::ShowResult() { // time_lapse in ms
     std::ostringstream precisionTextStream;
     precisionTextStream << "Precision: " << std::setprecision(2) << precision << "%";
     std::ostringstream wpmTextStream;
-    wpmTextStream << "Words per minute : " << 60000 * m_numOfWords / time_lapse;
+    wpmTextStream << "Words per minute : " << 60000 * m_numOfWords / time_lapse << " wpm";
 
     auto timeText = new wxStaticText(timePanel, wxID_ANY, timeTextStream.str(), {250, 100},{this->GetSize().x, 200});
     auto wordsNumText = new wxStaticText(wordsNumPanel, wxID_ANY, wordsNumTextStream.str(), {250, 100}, {this->GetSize().x, 200});
@@ -182,10 +186,18 @@ void MainFrame::ShowResult() { // time_lapse in ms
     auto wpmText = new wxStaticText(wpmPanel, wxID_ANY, wpmTextStream.str(), {250, 100}, {this->GetSize().x, 200});
 
 
-    timeText->SetFont(timeText->GetFont().Scale(5));
-    wordsNumText->SetFont(wordsNumText->GetFont().Scale(5));
-    precisionText->SetFont(precisionText->GetFont().Scale(5));
-    wpmText->SetFont(wpmText->GetFont().Scale(5));
+    timeText->SetFont(timeText->GetFont().Scale(3));
+    wordsNumText->SetFont(wordsNumText->GetFont().Scale(3));
+    precisionText->SetFont(precisionText->GetFont().Scale(3));
+    wpmText->SetFont(wpmText->GetFont().Scale(3));
+
+    auto backButton = new wxButton(this, wxID_ANY, "back to menu", {1200, 700},
+                                   {-1, 50});
+
+    backButton->Bind(wxEVT_BUTTON, [this](wxCommandEvent& event){
+        this->DestroyChildren();
+        ShowMenu();
+    });
 }
 
 

@@ -1,6 +1,5 @@
 #include "Character.h"
 
-#define NON_FG_COLOR {255, 255, 255, 255}
 #define NON_BG_COLOR {0, 0, 0, 0}
 #define CURRENT_BG_COLOR {255, 255, 40, 180}
 #define CORRECT_BG_COLOR {0, 255, 0, 180}
@@ -21,7 +20,6 @@ void Character::ChangeStatus(Character::STATUSES status) {
     switch (status) {
         case STATUSES::NON:
             m_status = STATUSES::NON;
-            SetForegroundColour(NON_FG_COLOR);
             SetBackgroundColour(NON_BG_COLOR);
             break;
         case STATUSES::CURRENT:
